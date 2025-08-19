@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Turn off echo 关闭回显
+set +x
+
+# 将工作目录设置为脚本所在目录
+# shellcheck disable=SC2164
+cd "$(dirname "$0")"
+
+flutter build apk --release
