@@ -44,13 +44,13 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")
-            ndk {
+            //ndk {
                 // https://docs.flutter.dev/release/breaking-changes/default-abi-filters-android
                 // Clear the automatically set filters.
-                abiFilters.clear()
+                ndk.abiFilters.clear()
                 // Set your custom filters.
-                abiFilters = ["arm64-v8a", "armeabi-v7a"]
-            }
+                ndk.abiFilters = ["arm64-v8a", "armeabi-v7a"]
+            //}
         }
     }
 }
